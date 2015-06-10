@@ -1,0 +1,6 @@
+dependencies {
+	
+	compile project(':dogo-domain')
+	compile project(':dogo-persistance')
+	
+}

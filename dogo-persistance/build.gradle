@@ -1,0 +1,4 @@
+dependencies {
+	compile project(':dogo-domain')
+	compile 'org.hibernate:hibernate-core:4.3.10.Final'
+}

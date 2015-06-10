@@ -1,0 +1,4 @@
+include "dogo-domain"
+include "dogo-rest"
+include "dogo-service"
+include "dogo-persistance"
