@@ -53,7 +53,7 @@ public class DogoMVCInitializer extends WebMvcConfigurerAdapter{
     public LocalSessionFactoryBean getSessionFactory(DataSource dataSource) {
     	LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setPackagesToScan(new String[] { "com.globallogic.dogo.domain" });
+        sessionFactory.setPackagesToScan(new String[] { "com.globallogic.dogo.domain", "com.globallogic.dogo.domain.config" });
         sessionFactory.setHibernateProperties(getHibernateProperties());
         return sessionFactory;
     }

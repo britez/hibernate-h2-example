@@ -6,17 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.globallogic.dogo.domain.Project;
-import com.globallogic.dogo.persistance.ProjectPersistance;
-import com.globallogic.dogo.persistance.exception.ObjectNotFoundException;
+import com.globallogic.dogo.persistence.ProjectPersistence;
+import com.globallogic.dogo.persistence.exception.ObjectNotFoundException;
 import com.globallogic.dogo.services.exception.ResourceNotFoundException;
 
 @Service
 public class ProjectService {
 	
-	private ProjectPersistance persistance;
+	private ProjectPersistence persistance;
 	
 	@Autowired
-	public ProjectService(ProjectPersistance projectPersistance) {
+	public ProjectService(ProjectPersistence projectPersistance) {
 		this.persistance = projectPersistance;
 	}
 	
@@ -35,7 +35,7 @@ public class ProjectService {
 	}
 
 	public void create(Project project) {
-		persistance.save(project);
+		persistance.create(project);
 	}
 
 }
